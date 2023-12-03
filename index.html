@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" name="author" content="bharathi">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhava Suba</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<script>
+    var subjectObject = {
+      "Tamilnadu": {
+        "Ariyalur": [],
+        "Chengalpattu": [],
+        "Chennai": [],
+        "Coimbatore": [],
+        "Cuddalore": [],
+        "Dharmapuri": [],
+        "Dindigul": [],
+        "Erode": [],
+        "Kallakurichi": [],
+        "Kanchipuram": [],
+        "Kanniyakumari": [],
+        "Karur": [],
+        "Krishnagiri": [],
+        "Madurai": [],
+        "Mayiladuthurai": [],
+        "Nagapattinam": [],
+        "Namakkal": [],
+        "Nilgiris": [],
+        "Perambalur": [],
+        "Pudukkottai": [],
+        "Ramanathapuram": [],
+        "Ranipet": [],
+        "Salem": [],
+        "Sivagangai": [],
+        "Tenkasi": [],
+        "Thanjavur": [],
+        "Theni": [],
+        "Thoothukudi": [],
+        "Tiruchirappalli": [],
+        "Tirupathur": [],   
+        "Tiruppur": [],
+        "Tiruvallur": [],
+        "Tiruvannamalai": [],
+        "Tiruvarur": [],
+        "Vellore": [],
+        "Viluppuram": [],
+        "Virudhunagar": [],
+      },
+      "Telangana": {
+        "Anandapur": [],
+        "Hyderabad": [],
+        "Kakinada" :[],
+        "Tirupati" :[],
+        "Visakhapatnam": [],
+      },
+      "karnataka": {
+        "Bangalore" :[],
+        "Electronics City" : [],
+        "Jayanagar" : [],
+      },
+      "Pondicherry": {
+        "Karaikal" : [],
+        "Puducherry" : [],
+      }
+    }
+    window.onload = function() {
+      var subjectSel = document.getElementById("state");
+      var topicSel = document.getElementById("city");
+      for (var x in subjectObject) {
+        subjectSel.options[subjectSel.options.length] = new Option(x, x);
+      }
+      subjectSel.onchange = function() {
+        //empty Topics dropdown
+        topicSel.length = 1;
+        //display correct values
+        for (var y in subjectObject[this.value]) {
+          topicSel.options[topicSel.options.length] = new Option(y, y);
+        }
+      }
+    }
+    </script>
+<!-- 
+    <?php
+    if(!empty($_POST["send"])){
+    $First Name = $_POST["First Name"];
+    $Last Name = $_POST["Last Name"];
+    $Email = $_POST["Email"];
+    $Mobile = $_POST["Mobile"];
+    $state = $_POST["state"];
+    $city = $_POST["city"];
+    $Investment = $_POST["Investment"];
+    $textarea = $_POST["textarea"];
+    $toEmail = $_POST["bharathiprofenaa@gmail.com"];
+    }
+
+    $mailHeaders = ""
+
+
+    ?> -->
+
+<div class="firstcontainer">
+    <div class="secondcontainer">
+        <h1>Bhava Suba</h1>
+        <div class="heading">
+            <li style="font-size: 200%;">Inviting Franchise Partners FICO Model</li>
+            <li style="font-size: 130%;">Speciality Clinic Platform Offering </li>
+            <li style="font-size: 130%;">Diagnostic Products and Treatment For Skin Diseases</li>
+            <li style="font-size: 110%;" class="blink">(Psoriasis and Eczema)</li>
+        </div>
+
+    </div>
+    <div class="container">
+        <h2>Register Now for Franchise!</h2>
+        <div class="formcontainer">
+            <form method="post" action="login.php">
+                <div class="form1">
+
+                    <input type="text" placeholder="First Name" name="First_Name" class="inner" required>
+                </div>
+                <div class="form1">
+
+                    <input type="text" placeholder="Middle Name" name="Middle_Name" class="inner" required>
+                </div>
+                <div class="form1">
+
+                    <input type="text" placeholder="Last Name" name="Last_Name" class="inner" required>
+                </div>
+                <div class="form1">
+
+                    <input type="email" placeholder="Email" name="Email" class="inner" required>
+                </div>
+                <div class="form1">
+                    <input type="number" placeholder="Mobile" name="Mobile" id="phone" pattern="[0-9] {10}"
+                        class="inner" required>
+                </div>
+                <div class="form1">
+                    <input type="number" placeholder="Alternative Mobile" id="phone" pattern="[0-9] {10}"
+                        name="Alternative_Mobile" class="inner" required>
+                </div>
+
+                <body>
+                    </head>
+
+                    <body>
+                        <div class="form1">
+
+                            <select id="state" name="state" class="inner" required>
+                                <option value="" selected="selected">Select State</option>
+                            </select>
+                        </div>
+                        <div class="form1">
+                            <select id="city" name="city" class="inner" required>
+                                <option value="" selected="selected">Select district</option>
+                            </select>
+                        </div>
+                        <div class="form1">
+                            <select id="Investment" name="Investment" class="inner" required>
+                                <option value="Select Investment Range">Select Investment Range</option>
+                                <option value="Rs. 5Lac - 10Lac">Rs. 5Lac - 10Lac</option>
+                                <option value="Rs. 10Lac - 20Lac">Rs. 10Lac - 20Lac</option>
+                                <option value="Rs. 20Lac - 30Lac">Rs. 20Lac - 30Lac</option>
+                                <option value="Rs. 30Lac - 40Lac">Rs. 30Lac - 40Lac</option>
+                                <option value="Rs. 40Lac - 50Lac">Rs. 40Lac - 50Lac</option>
+                                <option value="Rs. 50Lac - 60Lac">Rs. 50Lac - 60Lac</option>
+                            </select>
+                        </div>
+                        <div class="form1">
+                            <textarea class="inner" name="Textarea" placeholder="Query (optional)"></textarea>
+                        </div>
+                        <div class="btn">
+                            <center><button name="send">Submit</button></center>
+                        </div>
+
+            </form>
+        </div>
+
+    </div>
+
+</div>
+<div class="maincontainer2">
+    <div class="maincontainer2sub">
+        <h1>Human skin segment have a large opportunity</h1>
+        <h4>Everyone between 15-100 years of age seeks clinical solutions multiple times to keep them healthy</h4>
+    </div>
+    <div class="maincontainer2sub2">
+        <table class="table1">
+            <tr>
+                <th><img src="./image/Diagn.png" alt=""></th>
+            </tr>
+            <tr>
+                <th>
+                    <h3>Diagnosis</h3>
+                </th>
+            </tr>
+        </table>
+
+        <table class="table2">
+            <tr>
+                <th><img src="./image/kid.png" alt=""></th>
+            </tr>
+            <tr>
+                <th>
+                    <h3>Pharma products</h3>
+                </th>
+            </tr>
+        </table class="table3">
+
+        <table>
+            <tr>
+                <th><img src="./image/doctor.png" alt=""></th>
+            </tr>
+            <tr>
+                <th>
+                    <h3>Procedures and Treatments</h3>
+                </th>
+            </tr>
+        </table>
+    </div>
+    <!-- humanity for responsive -->
+    <div class="humancontainer">
+        <div class="humancontainer2">
+            <img src="./image/Diagn.png" alt="">
+            <h3>Diagnosis</h3>
+            <img src="./image/kid.png" alt="">
+            <h3>Pharma products</h3>
+            <th><img src="./image/doctor.png" alt=""></th>
+            <h3>Procedures and Treatments</h3>
+        </div>
+    </div>
+</div>
+<div class="aboutcontainer">
+    <div class="aboutfirst">
+        <img src="./image/view1.jpg" alt="">
+    </div>
+    <div class="aboutsecond">
+        <h1>About the Brand</h1>
+        <p>India developing new technology in trending health problems by normal way. Where our Brand concentrating
+            to
+            treat Psoriasis and Eczema. Bhava Suba was started in 2021 and offering, home screening residential
+            treatment
+            . Bhava suba backed by Ayush Doctors with over 15 years of experience and it has a new noval treatment
+            for
+            age old skin problem espicially Psoriasis and Eczema. We are planning to provide skin care solutions.
+            Hence
+            we are planning to move ahead to promote and expand our business throungh FICO franchise model. PAN
+            India(Future
+            expansion all over India espically near IT corridor)</p>
+    </div>
+
+</div>
+<br>
+<div id="building">
+    <h1>Great Reasons to Partner with Bhava Suba</h1>
+    <div class="buildig2">
+        <ul>
+            <li>45 Proposed Clinics across India</li>
+            <li>50+ Proposed Partners Clinics</li>
+            <li>2000+ Patients expected per day </li>
+            <li>2000+ Customers</li>
+        </ul>
+        <ul>
+            <li>Rent and operation borne by the brand</li>
+            <li>15% Internal Rate of Returns</li>
+            <li>Vast experience in skin care</li>
+            <li>Comprehensive support by Doctors</li>
+
+        </ul>
+        <ul>
+            <li>50% profit share to the Franchise</li>
+            <li>10,000 sq-ft pharma</li>
+        </ul>
+    </div>
+    <br><br><br><br><br>
+</div>
+<br>
+<div class="facts">
+    <h1>Franchise Facts for Bhava Suba</h1>
+    <div class="facts2">
+        <table>
+            <tr>
+                <th><img src="./image/factimage.png" alt=""></th>
+                <th><img src="./image/microimage.png" alt=""></th>
+                <th><img src="./image/location.png" alt=""></th>
+            </tr>
+            <tr>
+                <td>
+                    <h3><strong>Area </strong>: 600-800 sq-ft with bath and toilet separately</h3>
+                </td>
+                <td>
+                    <h3><strong>Investment </strong>: Starts with 5Lakhs</h3>
+                </td>
+                <td>
+                    <h3><strong>Expansion </strong>: Other than South India Especially Near IT parks</h3>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- franshise facts for bhava suba for responsive -->
+<div class="demo">
+    <h1>Franchise Facts for Bhava Suba</h1>
+    <div class="demo2">
+        <img src="./image/factimage.png" alt="">
+        <h3><strong>Area </strong>: 600-800 sq-ft with bath and toilet separately</h3>
+        <img src="./image/microimage.png" alt="">
+        <h3><strong>Investment </strong>: Starts with 5Lakhs</h3>
+        <img src="./image/location.png" alt="">
+        <h3><strong>Expansion </strong>: Other than South India Especially Near IT parks</h3>
+    </div>
+</div>
+<br>
+<footer>
+    <h6><strong>Disclaimer:</strong> Investors are recommended to make appropriate enquiries and seek appropriate
+        advice before
+        incurring any expenses, acting on recommendation or entering into commitment in relation to any brochure as
+        published by Bhava Suba. Bhava Suba doesn't vouch for any claims made by
+        the franchisor or dealing in any products or services. The owners of Bhava Suba shall
+        not be held liable for consequences, in the event such claims are found incorrect by investors.</h6>
+</footer>
+
+</body>
+
+</html>
+<!-- <script>
+    let input = document.querySelector("#phone");
+    window.intlTelInput(input, {});
+</script> -->
